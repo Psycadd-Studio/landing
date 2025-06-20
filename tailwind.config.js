@@ -24,7 +24,6 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-inter)', ...fontFamily.sans],
         serif: ['var(--font-playfair)', ...fontFamily.serif],
-        // spaceboy: ['var(--font-spaceboy)'],
       },
     },
   },

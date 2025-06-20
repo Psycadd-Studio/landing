@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
-// import localFont from 'next/font/local'
 import './globals.css'
 
 const inter = Inter({ 
@@ -14,14 +13,6 @@ const playfair = Playfair_Display({
   variable: '--font-playfair',
   display: 'swap'
 })
-
-/*
-const spaceboy = localFont({
-  src: '@/fonts/spaceboy.TTF',
-  variable: '--font-spaceboy',
-  display: 'swap',
-})
-*/
 
 export const metadata: Metadata = {
   title: 'Psycadd Studio – Immersive Card Games | Smoke & Toke | Snuff & Puff',
