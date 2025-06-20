@@ -417,7 +417,7 @@ p {
 }
 
 .game-fullscreen.dark-theme .feature-text {
-  color: #b0b0b0;
+  color: #00d685;
   font-weight: 500;
   font-size: 0.95rem;
   line-height: 1.7;
@@ -924,7 +924,12 @@ body {
 }
 
 .game-fullscreen.dark-theme .feature-text {
-  color: #b0b0b0;
+  color: #00d685;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 1.5rem 0;
+  text-align: center;
 }
 
 .game-fullscreen.dark-theme .tags-wrapper {
