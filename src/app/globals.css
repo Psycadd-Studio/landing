@@ -417,7 +417,7 @@ p {
 }
 
 .game-fullscreen.dark-theme .feature-text {
-  color: #00ff9d;
+  color: #00d685;
   font-weight: 500;
   font-size: 0.95rem;
   line-height: 1.7;
@@ -437,16 +437,16 @@ p {
 .game-fullscreen.dark-theme .tags-wrapper span {
   display: inline-block;
   background: transparent;
-  color: #00ff9d;
+  color: #00d685;
   padding: 0.5rem 1.5rem;
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 500;
-  border: 1px solid #00ff9d;
+  border: 1px solid #00d685;
 }
 
 .game-fullscreen.dark-theme .green-text {
-  color: #00ff9d;
+  color: #00d685;
   margin-top: 1.5rem;
 }
 
@@ -924,7 +924,7 @@ body {
 }
 
 .game-fullscreen.dark-theme .feature-text {
-  color: #00ff9d;
+  color: #00d685;
 }
 
 .game-fullscreen.dark-theme .tags-wrapper {
