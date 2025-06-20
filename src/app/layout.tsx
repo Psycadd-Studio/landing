@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 })
 
 const spaceboy = localFont({
-  src: '../fonts/spaceboy.TTF',
+  src: '@/fonts/spaceboy.TTF',
   variable: '--font-spaceboy',
   display: 'swap',
 })
