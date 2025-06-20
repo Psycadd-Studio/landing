@@ -90,7 +90,7 @@ export default function Home() {
               height={40}
               priority
             />
-            <span>Psycadd Studio</span>
+            <span className="font-spaceboy">Psycadd Studio</span>
           </div>
         </div>
       </header>
@@ -134,7 +134,7 @@ export default function Home() {
                   className="concept-image"
                 />
               </div>
-              <h3 id="signup-heading">Join the crew</h3>
+              <h3 id="signup-heading" className="font-spaceboy">Join the crew</h3>
               <p className="signup-description">
                 Be the first to experience Smoke & Toke and Snuff & Puff.<br />
                 Join the waiting list for these immersive card games to launch on Kickstarter.
@@ -248,7 +248,7 @@ export default function Home() {
             />
           </picture>
           <div className="game-details-below">
-            <h3>Smoke & Toke</h3>
+            <h3 className="font-spaceboy">Smoke & Toke</h3>
             <p>
               A high-stakes clash of strategy, luck, and cannabis-fueled chaos where the highest bidder doesn't always win the fight—but the highest player just might.
             </p>
@@ -281,9 +281,9 @@ export default function Home() {
             />
           </picture>
           <div className="game-details-below">
-            <h3>Snuff & Puff</h3>
+            <h3 className="font-spaceboy">Snuff & Puff</h3>
             <p>
-              A card game for geeks like us who always dreamt of living the thug life, but didn't have the balls to do so.
+              A whimsical game of wits, strategy, and chaotic bluffs, where players gather fantastical creatures to prove their might and misdirection.
             </p>
             <div className="feature-text">
               Rob your friends.<br />
@@ -306,22 +306,22 @@ export default function Home() {
       <section className="about" id="about" aria-labelledby="about-heading">
         <div className="container">
           <h2 id="about-heading">About Psycadd Studio</h2>
-          <p>
-            We are passionate game designers committed to crafting immersive, strategic card games that bring people together. Pushing the boundaries of traditional game design by exploring themes and concepts rarely seen in the tabletop world.
+          <p className="text-center">
+            We are a small team of passionate creators, dedicated to crafting immersive and unforgettable tabletop experiences.
           </p>
           <div className="about-features">
-            <article className="about-feature">
-              <h4>Quality<br />Design</h4>
-              <p>Our games are crafted with striking, immersive artworks that draw players into their worlds. From meticulous illustrations to thoughtfully designed layouts, ensuring a balance between aesthetic brilliance and engaging gameplay.</p>
-            </article>
-            <article className="about-feature">
-              <h4>Unforgettable<br />Experiences</h4>
-              <p>We craft games that immerse players in unique, thought-provoking worlds, blending strategy with storytelling to create memorable moments that linger long after the cards are played.</p>
-            </article>
-            <article className="about-feature">
-              <h4>Looking<br />Ahead</h4>
-              <p>With exciting projects in the pipeline, we're constantly exploring fresh themes and innovative mechanics that keep gameplay engaging and dynamic. Our future releases promise new experiences that keep the table alive.</p>
-            </article>
+            <div className="about-feature">
+              <h3>Quality Design</h3>
+              <p>We believe in beautiful, high-quality components that enhance the gameplay and feel great in your hands.</p>
+            </div>
+            <div className="about-feature">
+              <h3>Unforgettable Experiences</h3>
+              <p>Our games are designed to be strategic, engaging, and full of surprising moments you'll talk about for years.</p>
+            </div>
+            <div className="about-feature">
+              <h3>Looking Ahead</h3>
+              <p>We're just getting started! We have a pipeline of new games and expansions we can't wait to share with you.</p>
+            </div>
           </div>
         </div>
       </section>

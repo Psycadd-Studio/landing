@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@font-face {
-    font-family: 'Spaceboy';
-    src: url('/fonts/spaceboy.TTF') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+@layer base {
+  body {
+    @apply bg-[#0d0d0d] text-gray-100;
+    font-family: var(--font-inter);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
 }
 
 /* Screen reader only class for accessibility */
@@ -95,7 +101,6 @@ p {
 }
 
 .logo span {
-  font-family: 'Spaceboy', sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
   white-space: nowrap;
@@ -1034,10 +1039,9 @@ body {
 }
 
 .signup-content h3 {
-  color: #22322b;
-  font-size: 1.6rem;
-  margin-bottom: 0.75rem;
-  text-align: center;
+  font-size: 2.25rem; /* 36px */
+  margin-bottom: 0.5rem; /* 8px */
+  color: #fff; /* Ensuring text is visible on dark card */
 }
 
 .signup-description {
@@ -1160,15 +1164,18 @@ body {
 }
 
 .signup-image {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  aspect-ratio: 300 / 225;
 }
 
 .concept-image {
   object-fit: contain;
   max-width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
@@ -1282,12 +1289,10 @@ main {
 
 @media (max-width: 768px) {
   .signup-form {
-    min-height: 320px; /* Keep original height for mobile */
+    padding: 0 1rem;
   }
-  
   .form-message {
-    min-height: 56px; /* Keep original height for mobile */
-    margin-top: 1rem;
+    bottom: -50px;
   }
 }
 

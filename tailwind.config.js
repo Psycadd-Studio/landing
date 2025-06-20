@@ -1,3 +1,7 @@
+const {
+  fontFamily
+} = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -18,7 +22,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)'],
+        sans: ['var(--font-inter)', ...fontFamily.sans],
+        serif: ['var(--font-playfair)', ...fontFamily.serif],
+        spaceboy: ['var(--font-spaceboy)'],
       },
     },
   },
