@@ -67,6 +67,16 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
+  manifest: '/manifest.json',
+  themeColor: '#000000',
+  other: {
+    'msapplication-TileColor': '#000000',
+  },
+  viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover'
 }
 
 export default function RootLayout({
@@ -76,15 +86,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="msapplication-TileColor" content="#000000" />
-        
-        {/* Structured Data */}
+      <body className={`${inter.variable} ${playfair.variable}`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -126,9 +128,8 @@ export default function RootLayout({
               }
             })
           }}
+          id="json-ld"
         />
-      </head>
-      <body className={`${inter.variable} ${playfair.variable}`}>
         {children}
       </body>
     </html>

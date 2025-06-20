@@ -1289,4 +1289,19 @@ main {
     min-height: 56px; /* Keep original height for mobile */
     margin-top: 1rem;
   }
+}
+
+.desktop-hero-image {
+  display: block;
+}
+.mobile-hero-image {
+  display: none;
+}
+@media (max-width: 768px) {
+  .desktop-hero-image {
+    display: none;
+  }
+  .mobile-hero-image {
+    display: block;
+  }
 } 

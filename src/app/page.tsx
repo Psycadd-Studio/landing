@@ -97,17 +97,26 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="hero" role="banner" aria-label="Hero Banner">
-        <picture>
-          <source media="(max-width: 768px)" srcSet="/banner-mobile.webp" />
+        <div className="mobile-hero-image">
+          <Image
+            src="/banner-mobile.webp" 
+            alt="Psycadd Studio Hero Banner - Immersive Card Games" 
+            className="hero-bg"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 0vw"
+          />
+        </div>
+        <div className="desktop-hero-image">
           <Image
             src="/hero-bg-placeholder.webp" 
             alt="Psycadd Studio Hero Banner - Immersive Card Games" 
             className="hero-bg"
             fill
             priority
-            sizes="100vw"
+            sizes="(min-width: 769px) 100vw, 0vw"
           />
-        </picture>
+        </div>
         <div className="hero-overlay"></div>
       </section>
 
