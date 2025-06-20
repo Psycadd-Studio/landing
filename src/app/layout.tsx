@@ -15,8 +15,11 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Psycadd Studio – Immersive Card Games | Smoke & Toke | Snuff & Puff',
-  description: 'Join Psycadd Studio\'s Kickstarter launch list for Smoke & Toke and Snuff & Puff - immersive, strategic card games with unforgettable experiences. Be the first to experience these unique tabletop games.',
+  title: 'Psycadd Studio - Immersive Card Games',
+  description: 'Join the waiting list for Smoke & Toke and Snuff & Puff, immersive card games launching soon on Kickstarter.',
+  icons: {
+    icon: '/favicon.svg',
+  },
   keywords: 'card games, tabletop games, Kickstarter, Smoke & Toke, Snuff & Puff, Psycadd Studio, strategic games, immersive games, board games, card game launch',
   authors: [{ name: 'Psycadd Studio' }],
   creator: 'Psycadd Studio',
@@ -66,10 +69,6 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'your-google-verification-code',
-  },
-  icons: {
-    icon: '/favicon.svg',
-    apple: '/favicon.svg',
   },
   manifest: '/manifest.json',
   themeColor: '#000000',
