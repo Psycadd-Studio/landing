@@ -211,27 +211,9 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="form-submit-area">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    aria-describedby="submit-status"
-                    style={{
-                      background: 'red',
-                      color: 'white',
-                      fontSize: '24px',
-                      padding: '20px',
-                      border: '5px solid yellow',
-                      position: 'fixed',
-                      top: '50%',
-                      left: '50%',
-                      transform: 'translate(-50%, -50%)',
-                      zIndex: 9999,
-                    }}
-                  >
-                    {isSubmitting ? 'Joining...' : 'Join Kickstarter Launch List'}
-                  </button>
-                </div>
+                <button type="submit" className="form-submit-button" disabled={isSubmitting} aria-describedby="submit-status">
+                  {isSubmitting ? 'Joining...' : 'Join Kickstarter Launch List'}
+                </button>
                 
                 <div 
                   className={`form-message ${message.type} ${message.text ? 'visible' : ''}`}
