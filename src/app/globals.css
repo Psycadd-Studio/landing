@@ -31,7 +31,7 @@ body, .hero, .hero-bg, .notify-section, .games, .about, .spread-word, .contact, 
   background: none;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: var(--font-inter), Arial, sans-serif;
   color: #22322b;
   overflow-x: hidden;
 }
@@ -44,7 +44,7 @@ body, .hero, .hero-bg, .notify-section, .games, .about, .spread-word, .contact, 
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-playfair-display), Georgia, serif;
   color: #22322b;
   margin-top: 0;
 }
@@ -502,7 +502,7 @@ p {
   color: #234634;
   font-size: 1.8rem;
   margin: 0 0 1.5rem 0;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-playfair-display), serif;
   text-align: center;
 }
 
@@ -1060,7 +1060,7 @@ body {
 }
 
 .signup-form {
-  position: relative;
+  position: static;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -1139,10 +1139,9 @@ body {
 }
 
 .signup-form small {
-  color: #6b7280;
-  font-size: 0.7rem;
-  text-align: center;
-  margin-top: 0.5rem;
+  font-size: 0.75rem; /* 12px */
+  margin-top: 0.75rem;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
@@ -1270,21 +1269,24 @@ main {
 }
 
 .form-message {
-  position: absolute;
-  bottom: -2.5rem; /* Position it below the form */
-  left: 0;
-  right: 0;
-  text-align: center;
-  margin-top: 0.5rem; /* Reduced from 1rem */
+  position: static;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  width: 100%;
+  margin-top: 0.5rem;
   padding: 0.75rem;
   border-radius: 8px;
   font-size: 0.9rem;
-  min-height: 40px; /* Reduced from 56px */
+  min-height: 48px; /* Match button height to reserve space */
+  visibility: hidden; /* Hide it completely */
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, visibility 0.2s;
+  box-sizing: border-box; /* Ensure padding is included in height */
 }
 
 .form-message.visible {
+  visibility: visible; /* Make it visible */
   opacity: 1;
 }
 
@@ -1320,4 +1322,11 @@ main {
   .mobile-hero-image {
     display: block;
   }
+}
+
+.form-submit-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 } 

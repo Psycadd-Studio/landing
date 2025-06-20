@@ -210,22 +210,20 @@ export default function Home() {
                     aria-describedby="phone-required"
                   />
                 </div>
-                <div className="form-row">
+                <div className="form-submit-area">
                   <button type="submit" disabled={isSubmitting} aria-describedby="submit-status">
                     {isSubmitting ? 'Joining...' : 'Join Kickstarter Launch List'}
                   </button>
-                </div>
-                <small>We respect your privacy. Unsubscribe at any time.</small>
-                {message.text && (
                   <div 
-                    className={`form-message ${message.type} visible`}
+                    className={`form-message ${message.type} ${message.text ? 'visible' : ''}`}
                     id="submit-status"
                     role="alert"
                     aria-live="polite"
                   >
                     {message.text}
                   </div>
-                )}
+                </div>
+                <small>We respect your privacy. Unsubscribe at any time.</small>
               </form>
             </div>
           </div>
@@ -283,7 +281,7 @@ export default function Home() {
           <div className="game-details-below">
             <h3>Snuff & Puff</h3>
             <p>
-              A whimsical game of wits, strategy, and chaotic bluffs, where players gather fantastical creatures to prove their might and misdirection.
+            A card game for geeks like us who always dreamt of living the thug life, but didn't have the balls to do so.
             </p>
             <div className="feature-text">
               Rob your friends.<br />
@@ -307,20 +305,20 @@ export default function Home() {
         <div className="container">
           <h2 id="about-heading">About Psycadd Studio</h2>
           <p className="text-center">
-            We are a small team of passionate creators, dedicated to crafting immersive and unforgettable tabletop experiences.
+          We are passionate game designers committed to crafting immersive, strategic card games that bring people together. Pushing the boundaries of traditional game design by exploring themes and concepts rarely seen in the tabletop world.
           </p>
           <div className="about-features">
             <div className="about-feature">
               <h3>Quality Design</h3>
-              <p>We believe in beautiful, high-quality components that enhance the gameplay and feel great in your hands.</p>
+              <p>Our games are crafted with striking, immersive artworks that draw players into their worlds. From meticulous illustrations to thoughtfully designed layouts, ensuring a blance between aesthetic brilliance and engaging gameplay.</p>
             </div>
             <div className="about-feature">
               <h3>Unforgettable Experiences</h3>
-              <p>Our games are designed to be strategic, engaging, and full of surprising moments you'll talk about for years.</p>
+              <p>We craft games that immerse players in unique, thought-provoking worlds, blending strategy with storytelling to create memorable moments that linger long after the cards are played.</p>
             </div>
             <div className="about-feature">
               <h3>Looking Ahead</h3>
-              <p>We're just getting started! We have a pipeline of new games and expansions we can't wait to share with you.</p>
+              <p>With exciting projects in the pipeline, we're constantly exploring fresh themes and innovative mechanics that keep gameplay engaging and dynamic. Our future releases promise new experiences that keep the table alive.</p>
             </div>
           </div>
         </div>
@@ -330,7 +328,7 @@ export default function Home() {
       <section className="spread-word" aria-labelledby="social-heading">
         <div className="container">
           <h2 id="social-heading">Spread the Word</h2>
-          <p>Help us build our community by sharing with fellow gamers.</p>
+          <p>Help us build our community by sharing with fellow gamers and good buds.</p>
           <div className="social-icons" role="list" aria-label="Social media links">
             <a href="https://www.reddit.com/user/psycadd_studio/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Reddit" role="listitem">
               <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

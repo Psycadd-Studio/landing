@@ -2,16 +2,16 @@ import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
+  display: 'swap',
   variable: '--font-inter',
-  display: 'swap'
 })
 
-const playfair = Playfair_Display({ 
+const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
-  variable: '--font-playfair',
-  display: 'swap'
+  display: 'swap',
+  variable: '--font-playfair-display',
 })
 
 export const metadata: Metadata = {
@@ -84,8 +84,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfairDisplay.variable}`}>
+      <body>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
