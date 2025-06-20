@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /admin/
+
+# Allow important pages
+Allow: /
+Allow: /sitemap.xml
+
+# Sitemap location
+Sitemap: https://psycaddstudio.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1 

@@ -1,0 +1,21 @@
+{
+  "name": "Psycadd Studio - Immersive Card Games",
+  "short_name": "Psycadd Studio",
+  "description": "Join Psycadd Studio's Kickstarter launch list for Smoke & Toke and Snuff & Puff - immersive, strategic card games",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["games", "entertainment"],
+  "lang": "en",
+  "dir": "ltr"
+} 
