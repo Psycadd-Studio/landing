@@ -1279,14 +1279,11 @@ main {
   border-radius: 8px;
   font-size: 0.9rem;
   min-height: 48px; /* Match button height to reserve space */
-  visibility: hidden; /* Hide it completely */
-  opacity: 0;
   transition: opacity 0.2s, visibility 0.2s;
   box-sizing: border-box; /* Ensure padding is included in height */
 }
 
 .form-message.visible {
-  visibility: visible; /* Make it visible */
   opacity: 1;
 }
 
