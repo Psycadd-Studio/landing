@@ -136,8 +136,7 @@ export default function Home() {
               </div>
               <h3 id="signup-heading">Join the crew</h3>
               <p className="signup-description">
-                Be the first to experience Smoke & Toke and Snuff & Puff.<br />
-                Join the waiting list for these immersive card games to launch on Kickstarter.
+                Be the first to experience Smoke & Toke and Snuff & Puff. Join the waiting list for these immersive card games to launch on Kickstarter.
               </p>
               <form className="signup-form" onSubmit={handleSubmit} aria-label="Kickstarter Launch List Signup">
                 <div className="form-row">
