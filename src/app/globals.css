@@ -1052,6 +1052,7 @@ body {
 }
 
 .signup-form {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -1262,10 +1263,14 @@ main {
 }
 
 .form-message {
+  position: absolute;
+  bottom: -2.5rem; /* Position it below the form */
+  left: 0;
+  right: 0;
+  text-align: center;
   margin-top: 0.5rem; /* Reduced from 1rem */
   padding: 0.75rem;
   border-radius: 8px;
-  text-align: center;
   font-size: 0.9rem;
   min-height: 40px; /* Reduced from 56px */
   opacity: 0;
