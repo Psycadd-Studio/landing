@@ -90,7 +90,7 @@ export default function Home() {
               height={40}
               priority
             />
-            <span className="font-spaceboy">Psycadd Studio</span>
+            <span>Psycadd Studio</span>
           </div>
         </div>
       </header>
@@ -134,7 +134,7 @@ export default function Home() {
                   className="concept-image"
                 />
               </div>
-              <h3 id="signup-heading" className="font-spaceboy">Join the crew</h3>
+              <h3 id="signup-heading">Join the crew</h3>
               <p className="signup-description">
                 Be the first to experience Smoke & Toke and Snuff & Puff.<br />
                 Join the waiting list for these immersive card games to launch on Kickstarter.
@@ -248,7 +248,7 @@ export default function Home() {
             />
           </picture>
           <div className="game-details-below">
-            <h3 className="font-spaceboy">Smoke & Toke</h3>
+            <h3>Smoke & Toke</h3>
             <p>
               A high-stakes clash of strategy, luck, and cannabis-fueled chaos where the highest bidder doesn't always win the fight—but the highest player just might.
             </p>
@@ -281,7 +281,7 @@ export default function Home() {
             />
           </picture>
           <div className="game-details-below">
-            <h3 className="font-spaceboy">Snuff & Puff</h3>
+            <h3>Snuff & Puff</h3>
             <p>
               A whimsical game of wits, strategy, and chaotic bluffs, where players gather fantastical creatures to prove their might and misdirection.
             </p>
