@@ -1064,7 +1064,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  min-height: 260px; /* Reduced from 320px */
+  min-height: auto; /* Let it size naturally */
 }
 
 .form-row {
@@ -1074,14 +1074,11 @@ body {
 }
 
 .form-row:nth-last-child(2) {
-  display: flex;
-  justify-content: center;
-  grid-template-columns: 1fr;
-  margin-top: 0.5rem;
+  display: none;
 }
 
 .form-row:nth-last-child(2) button {
-  min-width: 250px;
+  display: none;
 }
 
 .form-row input,
@@ -1268,22 +1265,28 @@ main {
   }
 }
 
-.form-message {
-  position: static;
-  bottom: auto;
-  left: auto;
-  right: auto;
-  width: 100%;
+.form-submit-area {
+  display: flex;
+  justify-content: center;
   margin-top: 0.5rem;
+}
+
+.form-message {
+  width: 100%;
   padding: 0.75rem;
   border-radius: 8px;
   font-size: 0.9rem;
-  min-height: 48px; /* Match button height to reserve space */
+  min-height: 48px; /* Reserve space */
+  margin-top: 0.5rem;
+  box-sizing: border-box; 
+  visibility: hidden; /* Hide by default */
+  opacity: 0;
   transition: opacity 0.2s, visibility 0.2s;
-  box-sizing: border-box; /* Ensure padding is included in height */
+  text-align: center;
 }
 
 .form-message.visible {
+  visibility: visible;
   opacity: 1;
 }
 

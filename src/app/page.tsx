@@ -210,19 +210,22 @@ export default function Home() {
                     aria-describedby="phone-required"
                   />
                 </div>
+
                 <div className="form-submit-area">
                   <button type="submit" disabled={isSubmitting} aria-describedby="submit-status">
                     {isSubmitting ? 'Joining...' : 'Join Kickstarter Launch List'}
                   </button>
-                  <div 
-                    className={`form-message ${message.type} ${message.text ? 'visible' : ''}`}
-                    id="submit-status"
-                    role="alert"
-                    aria-live="polite"
-                  >
-                    {message.text}
-                  </div>
                 </div>
+                
+                <div 
+                  className={`form-message ${message.type} ${message.text ? 'visible' : ''}`}
+                  id="submit-status"
+                  role="alert"
+                  aria-live="polite"
+                >
+                  {message.text}
+                </div>
+
                 <small>We respect your privacy. Unsubscribe at any time.</small>
               </form>
             </div>
