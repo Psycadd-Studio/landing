@@ -1127,7 +1127,7 @@ body {
 }
 
 .signup-form small {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   margin-top: 0.5rem;
   opacity: 0.8;
 }
@@ -1264,9 +1264,9 @@ main {
 
 .form-message {
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.5rem;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   min-height: 0;
   margin-top: 0;
   box-sizing: border-box; 
@@ -1279,7 +1279,7 @@ main {
 .form-message.visible {
   visibility: visible;
   opacity: 1;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 .form-message.success {
