@@ -1037,6 +1037,14 @@ body {
   border: 1px solid #e0e6e3;
 }
 
+.signup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
 .signup-content h3 {
   font-size: 2.25rem; /* 36px */
   margin-bottom: 0.5rem; /* 8px */
@@ -1164,11 +1172,10 @@ body {
 }
 
 .signup-image {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   width: 100%;
   max-width: 300px;
-  text-align: center;
-  aspect-ratio: 300 / 225;
+  height: auto;
 }
 
 .concept-image {
