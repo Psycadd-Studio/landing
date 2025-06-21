@@ -15,6 +15,7 @@ export default function Home() {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isFormExpanded, setIsFormExpanded] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -29,6 +30,10 @@ export default function Home() {
       country: e.target.value, 
       dialingCode: dial 
     }))
+  }
+
+  const handleExpandForm = () => {
+    setIsFormExpanded(true)
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -66,6 +71,7 @@ export default function Home() {
         })
         setFirstName('')
         setLastName('')
+        setIsFormExpanded(false)
       } else {
         const errorData = await response.json()
         setMessage({ text: errorData.message || 'Failed to join waitlist.', type: 'error' })
@@ -83,12 +89,12 @@ export default function Home() {
       <header className="header" role="banner">
         <div className="container header-content">
           <div className="logo">
-            <Image
+        <Image
               src="/logo-placeholder.webp" 
               alt="Psycadd Studio Logo" 
               width={40} 
               height={40}
-              priority
+          priority
             />
             <span>Psycadd Studio</span>
           </div>
@@ -98,14 +104,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero" role="banner" aria-label="Hero Banner">
         <div className="mobile-hero-image">
-          <Image
+        <Image
             src="/banner-mobile.webp" 
             alt="Psycadd Studio Hero Banner - Immersive Card Games" 
             className="hero-bg"
-            fill
-            priority
+          fill
+          priority
             sizes="(max-width: 768px) 100vw, 0vw"
-          />
+        />
         </div>
         <div className="desktop-hero-image">
           <Image
@@ -123,7 +129,7 @@ export default function Home() {
       {/* Email Notification Section */}
       <section className="notify-section" aria-labelledby="signup-heading">
         <div className="container">
-          <div className="signup-card">
+          <div className={`signup-card ${isFormExpanded ? 'expanded' : ''}`}>
             <div className="signup-content">
               <div className="signup-image">
                 <Image
@@ -133,99 +139,114 @@ export default function Home() {
                   height={225}
                   className="concept-image"
                 />
-              </div>
+      </div>
               <h3 id="signup-heading">Join the crew</h3>
               <p className="signup-description">
                 Be the first to experience Smoke & Toke and Snuff & Puff. Join the waiting list for these immersive card games to launch on Kickstarter.
               </p>
-              <form className="signup-form" onSubmit={handleSubmit} aria-label="Kickstarter Launch List Signup">
-                <div className="form-row">
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    required
-                    aria-label="First Name"
-                    aria-describedby="name-required"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    required
-                    aria-label="Last Name"
-                    aria-describedby="name-required"
-                  />
-                </div>
-                <div className="form-row">
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    value={formData.email}
-                    onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                    required
-                    aria-label="Email Address"
-                    aria-describedby="email-required"
-                  />
-                  <select
-                    value={formData.country}
-                    onChange={handleCountryChange}
-                    required
-                    aria-label="Country"
-                    aria-describedby="country-required"
+              
+              {!isFormExpanded ? (
+                <div className="signup-compact">
+                  <button 
+                    type="button" 
+                    className="form-expand-button" 
+                    onClick={handleExpandForm}
+                    aria-label="Expand signup form"
                   >
-                    <option value="" disabled>Country</option>
-                    <option value="ZA" data-dial="+27">South Africa</option>
-                    <option value="US" data-dial="+1">United States</option>
-                    <option value="GB" data-dial="+44">United Kingdom</option>
-                    <option value="IN" data-dial="+91">India</option>
-                    <option value="AU" data-dial="+61">Australia</option>
-                    <option value="CA" data-dial="+1">Canada</option>
-                    <option value="DE" data-dial="+49">Germany</option>
-                    <option value="FR" data-dial="+33">France</option>
-                    <option value="BR" data-dial="+55">Brazil</option>
-                    <option value="">Other</option>
-                  </select>
+                    Join Kickstarter Launch List
+                  </button>
+                  <small>We respect your privacy. Unsubscribe at any time.</small>
                 </div>
-                <div className="form-row">
-                  <input
-                    type="text"
-                    placeholder="+27"
-                    value={formData.dialingCode}
-                    onChange={(e) => setFormData(prev => ({ ...prev, dialingCode: e.target.value }))}
-                    required
-                    aria-label="Country Dialing Code"
-                    aria-describedby="phone-required"
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Mobile number"
-                    value={formData.mobile}
-                    onChange={(e) => setFormData(prev => ({ ...prev, mobile: e.target.value }))}
-                    required
-                    aria-label="Mobile Number"
-                    aria-describedby="phone-required"
-                  />
-                </div>
+              ) : (
+                <form className="signup-form" onSubmit={handleSubmit} aria-label="Kickstarter Launch List Signup">
+                  <div className="form-row">
+                    <input
+                      type="text"
+                      placeholder="First Name"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      required
+                      aria-label="First Name"
+                      aria-describedby="name-required"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Last Name"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      required
+                      aria-label="Last Name"
+                      aria-describedby="name-required"
+                    />
+                  </div>
+                  <div className="form-row">
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      value={formData.email}
+                      onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                      required
+                      aria-label="Email Address"
+                      aria-describedby="email-required"
+                    />
+                    <select
+                      value={formData.country}
+                      onChange={handleCountryChange}
+                      required
+                      aria-label="Country"
+                      aria-describedby="country-required"
+                    >
+                      <option value="" disabled>Country</option>
+                      <option value="ZA" data-dial="+27">South Africa</option>
+                      <option value="US" data-dial="+1">United States</option>
+                      <option value="GB" data-dial="+44">United Kingdom</option>
+                      <option value="IN" data-dial="+91">India</option>
+                      <option value="AU" data-dial="+61">Australia</option>
+                      <option value="CA" data-dial="+1">Canada</option>
+                      <option value="DE" data-dial="+49">Germany</option>
+                      <option value="FR" data-dial="+33">France</option>
+                      <option value="BR" data-dial="+55">Brazil</option>
+                      <option value="">Other</option>
+                    </select>
+                  </div>
+                  <div className="form-row">
+                    <input
+                      type="text"
+                      placeholder="+27"
+                      value={formData.dialingCode}
+                      onChange={(e) => setFormData(prev => ({ ...prev, dialingCode: e.target.value }))}
+                      required
+                      aria-label="Country Dialing Code"
+                      aria-describedby="phone-required"
+                    />
+                    <input
+                      type="tel"
+                      placeholder="Mobile number"
+                      value={formData.mobile}
+                      onChange={(e) => setFormData(prev => ({ ...prev, mobile: e.target.value }))}
+                      required
+                      aria-label="Mobile Number"
+                      aria-describedby="phone-required"
+                    />
+                  </div>
 
-                <button type="submit" className="form-submit-button" disabled={isSubmitting} aria-describedby="submit-status">
-                  {isSubmitting ? 'Joining...' : 'Join Kickstarter Launch List'}
-                </button>
-                
-                <div 
-                  className={`form-message ${message.type} ${message.text ? 'visible' : ''}`}
-                  id="submit-status"
-                  role="alert"
-                  aria-live="polite"
-                >
-                  {message.text}
-                </div>
+                  <button type="submit" className="form-submit-button" disabled={isSubmitting} aria-describedby="submit-status">
+                    {isSubmitting ? 'Joining...' : 'Join Kickstarter Launch List'}
+                  </button>
+                  
+                  <div 
+                    className={`form-message ${message.type} ${message.text ? 'visible' : ''}`}
+                    id="submit-status"
+                    role="alert"
+                    aria-live="polite"
+                  >
+                    {message.text}
+                  </div>
 
-                <small>We respect your privacy. Unsubscribe at any time.</small>
-              </form>
-            </div>
+                  <small>We respect your privacy. Unsubscribe at any time.</small>
+                </form>
+              )}
+                </div>
           </div>
         </div>
       </section>
@@ -250,6 +271,9 @@ export default function Home() {
             <p>
               A high-stakes clash of strategy, luck, and cannabis-fueled chaos where the highest bidder doesn't always win the fight—but the highest player just might.
             </p>
+            <p className="game-objective">
+            With expansions on the way, collect all your favorite strains and build your own deck.
+            </p>
             <div className="feature-text">
               Strain your buds.<br />
               Expand your grow op.<br />
@@ -260,7 +284,6 @@ export default function Home() {
               <span role="listitem">2-6 players</span>
               <span role="listitem">Ages 18+</span>
               <span role="listitem">Fast paced set-builder</span>
-              <span role="listitem">Combinable with Snuff & Puff</span>
             </div>
             <p className="green-text">Coming to Kickstarter in 2025</p>
           </div>
@@ -283,6 +306,9 @@ export default function Home() {
             <p>
             A card game for geeks like us who always dreamt of living the thug life, but didn't have the balls to do so.
             </p>
+            <p className="game-objective">
+            Be the first player to group chain either three sets of uppers, downers or psychedelics, or one of each.
+            </p>
             <div className="feature-text">
               Rob your friends.<br />
               Build your empire.<br />
@@ -292,8 +318,7 @@ export default function Home() {
               <span role="listitem">30-45 minutes</span>
               <span role="listitem">2-6 players</span>
               <span role="listitem">Ages 18+</span>
-              <span role="listitem">Fast paced set-builder</span>
-              <span role="listitem">Combinable with Smoke & Toke</span>
+              <span role="listitem">Technical set-builder</span>
             </div>
             <p className="green-text">Coming to Kickstarter in 2025</p>
           </div>
@@ -310,11 +335,11 @@ export default function Home() {
           <div className="about-features">
             <div className="about-feature">
               <h3>Quality Design</h3>
-              <p>Our games are crafted with striking, immersive artworks that draw players into their worlds. From meticulous illustrations to thoughtfully designed layouts, ensuring a blance between aesthetic brilliance and engaging gameplay.</p>
+              <p>Our games are crafted with immersive artworks that draw players into their worlds. From meticulous illustrations to thoughtfully designed layouts, ensuring a blance between aesthetic brilliance and engaging gameplay.</p>
             </div>
             <div className="about-feature">
-              <h3>Unforgettable Experiences</h3>
-              <p>We craft games that immerse players in unique, thought-provoking worlds, blending strategy with storytelling to create memorable moments that linger long after the cards are played.</p>
+              <h3>Polished Gameplay</h3>
+              <p> Our team of avid testers and badass geeks have worked tirelessly, having fun, to ensure that fun shall be had by many more, leaving memorable moments that are sure to linger long after the cards are played.</p>
             </div>
             <div className="about-feature">
               <h3>Looking Ahead</h3>
@@ -375,8 +400,8 @@ export default function Home() {
               height={250}
             />
             <p>&copy; 2025 Psycadd Studio. All Rights Reserved.</p>
-          </div>
         </div>
+      </div>
       </footer>
     </div>
   )

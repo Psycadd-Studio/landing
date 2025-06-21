@@ -366,9 +366,12 @@ p {
 .game-details-below p {
   color: #22322b;
   font-size: 1.1rem;
-  margin: 0 0 1rem 0;
   line-height: 1.6;
+  margin: 0 0 1rem 0;
   text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .game-details-below h3 {
@@ -390,6 +393,18 @@ p {
   font-size: 1rem;
   line-height: 1.5;
   text-align: center;
+}
+
+.game-details-below .game-objective {
+  color: #22322b;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
 }
 
 .game-fullscreen.dark-theme {
@@ -438,9 +453,9 @@ p {
   display: inline-block;
   background: transparent;
   color: #b0b0b0;
-  padding: 0.5rem 1.5rem;
+  padding: 0.35rem 1.2rem;
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   border: 1px solid #b0b0b0;
 }
@@ -498,7 +513,7 @@ p {
   align-items: center;
 }
 
-.about-feature h4 {
+.about-feature h3 {
   color: #234634;
   font-size: 1.8rem;
   margin: 0 0 1.5rem 0;
@@ -823,8 +838,8 @@ body {
   }
   
   .game-fullscreen.dark-theme .tags-wrapper span {
-    padding: 0.4rem 1.2rem;
-    font-size: 0.9rem;
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
   }
 
   .game-fullscreen.dark-theme .feature-text {
@@ -887,9 +902,9 @@ body {
   display: inline-block;
   background: #f3f6f5;
   color: #22322b;
-  padding: 0.5rem 1.5rem;
+  padding: 0.35rem 1.2rem;
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.2s ease;
 }
@@ -909,8 +924,8 @@ body {
   }
   
   .tags-wrapper span {
-    padding: 0.4rem 1.2rem;
-    font-size: 0.9rem;
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -971,9 +986,9 @@ body {
   display: inline-block;
   background: transparent;
   color: #2e7d5a;
-  padding: 0.5rem 1.5rem;
+  padding: 0.35rem 1.2rem;
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   border: 1px solid #2e7d5a;
 }
@@ -990,8 +1005,8 @@ body {
   }
   
   .game-fullscreen .tags-wrapper span {
-    padding: 0.4rem 1.2rem;
-    font-size: 0.9rem;
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1040,6 +1055,11 @@ body {
   max-width: 800px;
   margin: 0 auto;
   border: 1px solid #e0e6e3;
+  transition: all 0.3s ease;
+}
+
+.signup-card.expanded {
+  padding: 2rem 3rem 3rem 3rem;
 }
 
 .signup-content {
@@ -1064,6 +1084,44 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.signup-compact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-expand-button {
+  background: #2e7d5a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: auto;
+  text-align: center;
+  line-height: 1.2;
+  height: 48px;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(46,125,90,0.2);
+}
+
+.form-expand-button:hover {
+  background: #234634;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(46,125,90,0.3);
+}
+
+.form-expand-button:focus {
+  outline: 2px solid #2e7d5a;
+  outline-offset: 2px;
+}
+
 .signup-form {
   position: static;
   display: flex;
@@ -1073,6 +1131,18 @@ body {
   width: 100%;
   max-width: 600px;
   min-height: auto;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .form-row {
@@ -1143,27 +1213,34 @@ body {
 
 @media (max-width: 768px) {
   .signup-card {
-    padding: 1.5rem;
-    margin: 0 0.5rem;
-    width: calc(100% - 1rem);
+    padding: 1.5rem 2rem;
+    margin: 0 1rem;
+  }
+  
+  .signup-card.expanded {
+    padding: 1.5rem 2rem 2.5rem 2rem;
   }
   
   .form-row {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
   
   .signup-content h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   
   .signup-description {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+  }
+  
+  .form-expand-button {
+    padding: 0.75rem 2rem;
+    font-size: 0.95rem;
   }
   
   .form-row button {
-    min-width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.75rem 2rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -1385,4 +1462,11 @@ main {
     padding: 0.75rem 1rem;
     font-size: 0.9rem;
   }
+}
+
+.signup-compact small {
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+  white-space: nowrap;
 } 
