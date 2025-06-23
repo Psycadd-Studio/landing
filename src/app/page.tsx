@@ -269,7 +269,7 @@ export default function Home() {
           <div className="game-details-below">
             <h3>Smoke & Toke</h3>
             <p>
-              A high-stakes clash of strategy, luck, and cannabis-fueled chaos where the highest bidder doesn't always win the fight—but the highest player just might.
+            A 420 friendly cannabis card game for sticky icky tree huggers, bong lovers, dab dippers and bubbleberry skunk rippers.<br /><br />A high-stakes clash of strategy, luck, and cannabis-fueled chaos where the highest bidder doesn't always win the fight—but the highest player just might.
             </p>
             <p className="game-objective">
             With expansions on the way, collect all your favorite strains and build your own deck.
