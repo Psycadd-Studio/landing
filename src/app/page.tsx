@@ -335,7 +335,7 @@ export default function Home() {
           <div className="about-features">
             <div className="about-feature">
               <h3>Quality Design</h3>
-              <p>Our games are crafted with immersive artworks that draw players into their worlds. From meticulous illustrations to thoughtfully designed layouts, ensuring a blance between aesthetic brilliance and engaging gameplay.</p>
+              <p>Our games are crafted with immersive artworks that draw players into their worlds. From meticulous illustrations to thoughtfully designed layouts, ensuring a balance between aesthetic brilliance and engaging gameplay.</p>
             </div>
             <div className="about-feature">
               <h3>Polished Gameplay</h3>
