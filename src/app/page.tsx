@@ -320,7 +320,7 @@ export default function Home() {
               <span role="listitem">Ages 18+</span>
               <span role="listitem">Technical set-builder</span>
             </div>
-            <p className="green-text">Coming to Kickstarter in 2025</p>
+            <p className="green-text">Coming to Kickstarter in 2026</p>
           </div>
         </article>
       </section>
