@@ -349,6 +349,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Story So Far */}
+      <section className="our-story" id="our-story" aria-labelledby="our-story-heading">
+        <div className="container">
+          <h2 id="our-story-heading" className="text-3xl font-bold text-center mb-8">Our Story So Far</h2>
+          <div className="story-content text-center max-w-4xl mx-auto">
+            <p className="mb-4">
+              Psycadd Studio is the brainchild of a single pair of minds - a relentless designer and his brother, eye-in-sky. A project that the two started somewhat nine years ago, but had to put on the backburner until it burnt a hole in their shelf. But luckily, some good ideas don't die quietly, they ferment.
+            </p>
+            <p className="mb-4">
+              Now, after years of reshaping Smoke & Toke and Snuff & Puff, the games have been built, tested, broken, rebuilt, retested, iterated, rebroken, reiterated, unbroken and untamed til the point we find ourselves now - ready for you to play.
+            </p>
+            <p className="mb-4">
+              Snuff & Puff features an art style using photos of the creators, stylized and modified onto illustrated backgrounds, giving a bold, personal touch baked into the game. The artworks on Smoke & Toke are comic style illustrations done with Photoshop, Illustrator and the help of some A and I along the way.
+            </p>
+            <p>
+              While the games share similarities in card design, they are 2 stand-alone games, from the same multiverse, that speak in different tones. They are games that are forged by friends, tested in living rooms and backyards, polished through laughter and sabotage, and built to bring out the inner animals we all keep inside.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Spread the Word */}
       <section className="spread-word" aria-labelledby="social-heading">
         <div className="container">

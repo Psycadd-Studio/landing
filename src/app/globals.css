@@ -529,10 +529,16 @@ p {
   text-align: center;
 }
 
+.our-story {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
 /* Spread Word Section */
 .spread-word {
   padding: 4rem 0;
   text-align: center;
+  background: #f7f7f7;
 }
 
 .spread-word h2 {
