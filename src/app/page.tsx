@@ -288,41 +288,6 @@ export default function Home() {
             <p className="green-text">Coming to Kickstarter in 2025</p>
           </div>
         </article>
-
-        <article className="game-fullscreen dark-theme">
-          <picture>
-            <source media="(max-width: 768px)" srcSet="/game2-mobile.webp" />
-            <Image
-              src="/game2-placeholder.webp"
-              alt="Snuff & Puff Card Game - Thug life empire building strategy game"
-              width={1920}
-              height={1080}
-              className="game-fullscreen-image"
-              priority
-            />
-          </picture>
-          <div className="game-details-below">
-            <h3>Snuff & Puff</h3>
-            <p>
-            A card game for geeks like us who always dreamt of living the thug life, but didn't have the balls to do so.
-            </p>
-            <p className="game-objective">
-            Be the first player to group chain either three sets of uppers, downers or psychedelics, or one of each.
-            </p>
-            <div className="feature-text">
-              Rob your friends.<br />
-              Build your empire.<br />
-              Become the Kingpin.
-            </div>
-            <div className="tags-wrapper" role="list" aria-label="Game specifications">
-              <span role="listitem">30-45 minutes</span>
-              <span role="listitem">2-6 players</span>
-              <span role="listitem">Ages 18+</span>
-              <span role="listitem">Technical set-builder</span>
-            </div>
-            <p className="green-text">Coming to Kickstarter in 2026</p>
-          </div>
-        </article>
       </section>
 
       {/* About Section */}
@@ -358,13 +323,13 @@ export default function Home() {
               Psycadd Studio is the brainchild of a single pair of minds - a relentless designer and his brother, eye-in-sky. A project that the two started somewhat nine years ago, but had to put on the backburner until it burnt a hole in their shelf. But luckily, some good ideas don't die quietly, they ferment.
             </p>
             <p className="mb-4">
-              Now, after years of reshaping Smoke & Toke and Snuff & Puff, the games have been built, tested, broken, rebuilt, retested, iterated, rebroken, reiterated, unbroken and untamed til the point we find ourselves now - ready for you to play.
+              Now, after years of reshaping Smoke & Toke, the game has been built, tested, broken, rebuilt, retested, iterated, rebroken, reiterated, unbroken and untamed til the point we find ourselves now - ready for you to play.
             </p>
             <p className="mb-4">
-              Snuff & Puff features an art style using photos of the creators, stylized and modified onto illustrated backgrounds, giving a bold, personal touch baked into the game. The artworks on Smoke & Toke are comic style illustrations done with Photoshop, Illustrator and the help of some A and I along the way.
+              The artworks on Smoke & Toke are comic style illustrations done with Photoshop, Illustrator and the help of some A and I along the way.
             </p>
             <p>
-              While the games share similarities in card design, they are 2 stand-alone games, from the same multiverse, that speak in different tones. They are games that are forged by friends, tested in living rooms and backyards, polished through laughter and sabotage, and built to bring out the inner animals we all keep inside.
+              This is a game that is forged by friends, tested in living rooms and backyards, polished through laughter and sabotage, and built to bring out the inner animals we all keep inside.
             </p>
           </div>
         </div>
