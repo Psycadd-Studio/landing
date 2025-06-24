@@ -329,7 +329,7 @@ export default function Home() {
               The artworks on Smoke & Toke are comic style illustrations done with Photoshop, Illustrator and the help of some A and I along the way.
             </p>
             <p>
-              This is a game that is forged by friends, tested in living rooms and backyards, polished through laughter and sabotage, and built to bring out the inner animals we all keep inside.
+              This is a game that is forged by friends, tested in living rooms and backyards, polished through laughter and sabotage, and built to bring out the inner animals we keep hot-boxed inside.
             </p>
           </div>
         </div>
