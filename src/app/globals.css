@@ -534,6 +534,43 @@ p {
   background-color: #fff;
 }
 
+/* Game Cards Gallery */
+.game-cards-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.game-card {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.game-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .game-cards-gallery {
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .game-card {
+    width: 100%;
+    max-width: none;
+  }
+}
+
 /* Spread Word Section */
 .spread-word {
   padding: 4rem 0;

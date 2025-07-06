@@ -279,6 +279,46 @@ export default function Home() {
               Expand your grow op.<br />
               Smoke your crew before they smoke you.
             </div>
+            
+            {/* Game Cards Gallery */}
+            <div className="game-cards-gallery">
+              <Image
+                src="/game-cards-01.webp"
+                alt="Smoke & Toke Game Card 1"
+                width={300}
+                height={420}
+                className="game-card"
+              />
+              <Image
+                src="/game-cards-02.webp"
+                alt="Smoke & Toke Game Card 2"
+                width={300}
+                height={420}
+                className="game-card"
+              />
+              <Image
+                src="/game-cards-03.webp"
+                alt="Smoke & Toke Game Card 3"
+                width={300}
+                height={420}
+                className="game-card"
+              />
+              <Image
+                src="/game-cards-04.webp"
+                alt="Smoke & Toke Game Card 4"
+                width={300}
+                height={420}
+                className="game-card"
+              />
+              <Image
+                src="/game-cards-05.webp"
+                alt="Smoke & Toke Game Card 5"
+                width={300}
+                height={420}
+                className="game-card"
+              />
+            </div>
+            
             <div className="tags-wrapper" role="list" aria-label="Game specifications">
               <span role="listitem">30-45 minutes</span>
               <span role="listitem">2-6 players</span>
